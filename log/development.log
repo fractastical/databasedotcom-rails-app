@@ -1,0 +1,313 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Nov 28 22:04:34 +0100 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:04:39 +0100 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:08:46 +0100 2011
+  Processing by LeadsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (syntax error on line 1, col 0: `client_secret: 5214825819967720745'):
+  app/controllers/leads_controller.rb:8:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:09:32 +0100 2011
+  Processing by LeadsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Rendered leads/index.html.erb within layouts/application (21.9ms)
+Compiled application.js  (6ms)  (pid 2196)
+Compiled jquery.js  (7ms)  (pid 2196)
+Compiled jquery_ujs.js  (1ms)  (pid 2196)
+Completed 200 OK in 26867ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Nov 28 22:09:59 +0100 2011
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Nov 28 22:09:59 +0100 2011
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Nov 28 22:09:59 +0100 2011
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:10:14 +0100 2011
+  Processing by LeadsController#new as HTML
+Rendered leads/_form.html.erb (5.5ms)
+Rendered leads/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `errors' for #<Lead:0x1097918a0>):
+    1: <%= form_for(@lead) do |f| %>
+    2:   <% if @lead.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+    5: 
+  app/views/leads/_form.html.erb:2:in `_app_views_leads__form_html_erb___1749523906_2226600580'
+  app/views/leads/_form.html.erb:1:in `_app_views_leads__form_html_erb___1749523906_2226600580'
+  app/views/leads/new.html.erb:5:in `_app_views_leads_new_html_erb__1536352064_2226777280'
+  app/controllers/leads_controller.rb:32:in `new'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:10:55 +0100 2011
+  Processing by LeadsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Rendered leads/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 2654ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Nov 28 22:10:58 +0100 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Nov 28 22:10:58 +0100 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Nov 28 22:10:58 +0100 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:10:59 +0100 2011
+  Processing by LeadsController#new as HTML
+Rendered leads/_form.html.erb (3.2ms)
+Rendered leads/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:11:04 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"Name"=>"J Spice"}}
+Completed 500 Internal Server Error in 1409ms
+
+Databasedotcom::SalesForceError (Inhaber-ID: Inhaber kann nicht leer sein):
+  app/controllers/leads_controller.rb:49:in `create'
+  app/controllers/leads_controller.rb:48:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:19:26 +0100 2011
+  Processing by LeadsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Rendered leads/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 19351ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Nov 28 22:19:46 +0100 2011
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Nov 28 22:19:46 +0100 2011
+Served asset /jquery_ujs.js - 304 Not Modified (68ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Nov 28 22:19:46 +0100 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:19:48 +0100 2011
+  Processing by LeadsController#new as HTML
+Rendered leads/_form.html.erb (2.6ms)
+Rendered leads/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:19:53 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"Name"=>"Poo Poo"}}
+Completed 500 Internal Server Error in 961ms
+
+Databasedotcom::SalesForceError (Konvertiert: Wert hat nicht den erforderlichen Typ: ):
+  app/controllers/leads_controller.rb:50:in `create'
+  app/controllers/leads_controller.rb:49:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:21:14 +0100 2011
+  Processing by LeadsController#new as HTML
+Rendered leads/_form.html.erb (1.5ms)
+Rendered leads/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Nov 28 22:21:14 +0100 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Nov 28 22:21:14 +0100 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Nov 28 22:21:14 +0100 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:21:16 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"Name"=>"Poo Poo"}}
+Completed 500 Internal Server Error in 1446ms
+
+Databasedotcom::SalesForceError (Vom Inhaber nicht gelesen: Wert hat nicht den erforderlichen Typ: ):
+  app/controllers/leads_controller.rb:53:in `create'
+  app/controllers/leads_controller.rb:52:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (50.1ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.2ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:22:58 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"Name"=>"Poo Poo"}}
+Completed 500 Internal Server Error in 11951ms
+
+Databasedotcom::SalesForceError (Erforderliche Felder fehlen: [LastName, Company]):
+  app/controllers/leads_controller.rb:54:in `create'
+  app/controllers/leads_controller.rb:53:in `create'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:24:56 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"Name"=>"Poo Poo"}}
+Redirected to http://0.0.0.0:3000/leads/00QU0000002MBw3MAG
+Completed 302 Found in 20428ms
+
+
+Started GET "/leads/00QU0000002MBw3MAG" for 127.0.0.1 at Mon Nov 28 22:25:17 +0100 2011
+  Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"00QU0000002MBw3MAG"}
+Rendered leads/show.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 857ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:37:27 +0100 2011
+  Processing by LeadsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant LeadsController::Lead):
+  app/controllers/leads_controller.rb:5:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/leads" for 127.0.0.1 at Mon Nov 28 22:37:29 +0100 2011
+  Processing by LeadsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant LeadsController::Lead):
+  app/controllers/leads_controller.rb:5:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Nov 28 22:37:33 +0100 2011
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:37:39 +0100 2011
+  Processing by LeadsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant LeadsController::Lead):
+  app/controllers/leads_controller.rb:27:in `new'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:37:40 +0100 2011
+  Processing by LeadsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant LeadsController::Lead):
+  app/controllers/leads_controller.rb:27:in `new'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/leads/new" for 127.0.0.1 at Mon Nov 28 22:43:19 +0100 2011
+  Processing by LeadsController#new as HTML
+Rendered leads/_form.html.erb (5.7ms)
+Rendered leads/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 18390ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Nov 28 22:43:38 +0100 2011
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Nov 28 22:43:38 +0100 2011
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Nov 28 22:43:38 +0100 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/leads" for 127.0.0.1 at Mon Nov 28 22:43:47 +0100 2011
+  Processing by LeadsController#create as HTML
+  Parameters: {"commit"=>"Create Lead", "authenticity_token"=>"Nz249/dqUp7cUB0+b58I3CqdSh/iugjsjhDbStJTSIQ=", "utf8"=>"\342\234\223", "lead"=>{"LastName"=>"Jolly", "FirstName"=>"James", "Company"=>"Jolly Joseph"}}
+Redirected to http://0.0.0.0:3000/leads/00QU0000002MBxCMAW
+Completed 302 Found in 2276ms
+
+
+Started GET "/leads/00QU0000002MBxCMAW" for 127.0.0.1 at Mon Nov 28 22:43:49 +0100 2011
+  Processing by LeadsController#show as HTML
+  Parameters: {"id"=>"00QU0000002MBxCMAW"}
+Rendered leads/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4448ms (Views: 12.9ms | ActiveRecord: 0.0ms)

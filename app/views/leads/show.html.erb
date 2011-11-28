@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @lead.FirstName %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @lead.LastName %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @lead.Company %>
+</p>
+
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>
